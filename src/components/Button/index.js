@@ -7,9 +7,13 @@ const Button = ({ title }) => {
     console.log('button clicked!!!');
   };
   return (
-    <Pressable hitSlop={20} onPress={handlePress} style={styles.container}>
+    <TouchableOpacity
+      activeOpacity={0.6}
+      onPress={handlePress}
+      style={styles.container}
+    >
       <Text>{title}</Text>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 

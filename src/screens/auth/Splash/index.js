@@ -10,9 +10,9 @@ const Splash = () => {
         style={styles.image}
         source={require('../../../assets/splash_image.png')}
       />
-      <Text style={styles.title}>
-        You'll Find <Text style={styles.innerTitle}>All You Need</Text> Here!
-      </Text>
+      <Text style={styles.title}>You'll Find </Text>
+      <Text style={[styles.title, styles.innerTitle]}>All You Need</Text>
+      <Text style={styles.title}>Here!</Text>
     </View>
   );
 };

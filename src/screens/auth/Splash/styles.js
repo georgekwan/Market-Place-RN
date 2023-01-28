@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   innerTitle: {
     color: '#FCA34D',

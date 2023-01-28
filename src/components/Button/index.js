@@ -3,12 +3,13 @@ import React from 'react';
 import { styles } from './styles';
 
 const Button = ({ title }) => {
+  const handlePress = () => {
+    console.log('button clicked!!!');
+  };
   return (
-    <View>
-      <Pressable style={styles.container}>
-        <Text>{title}</Text>
-      </Pressable>
-    </View>
+    <Pressable hitSlop={20} onPress={handlePress} style={styles.container}>
+      <Text>{title}</Text>
+    </Pressable>
   );
 };
 

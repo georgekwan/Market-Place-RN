@@ -17,4 +17,11 @@ export const styles = StyleSheet.create({
     color: '#FCA34D',
     textDecorationLine: 'underline',
   },
+  footerText: {
+    color: '#4F63AC',
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginTop: 30,
+    textAlign: 'center',
+  },
 });

@@ -17,7 +17,7 @@ const Splash = () => {
 
       <Button title="Sign up" />
       <Pressable hitSlop={20}>
-        <Text>Sign In</Text>
+        <Text style={styles.footerText}>Sign In</Text>
       </Pressable>
     </View>
   );

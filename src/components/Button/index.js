@@ -12,7 +12,7 @@ const Button = ({ title }) => {
       onPress={handlePress}
       style={styles.container}
     >
-      <Text>{title}</Text>
+      <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
 };

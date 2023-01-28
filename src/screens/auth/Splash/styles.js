@@ -8,6 +8,9 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 200,
   },
+  titleContainer: {
+    marginVertical: 54,
+  },
   title: {
     fontSize: 40,
     fontWeight: 'bold',

@@ -6,6 +6,9 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  image: {},
+  image: {
+    width: 18,
+    height: 18,
+  },
   title: {},
 });

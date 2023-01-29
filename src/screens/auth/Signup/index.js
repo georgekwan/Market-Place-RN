@@ -9,7 +9,9 @@ const Signup = () => {
     <View style={styles.container}>
       <AuthHeader title="Sign Up" />
 
-      <Input label="Email" />
+      <Input label="Name" placeholder="John Doe" />
+      <Input label="Email" placeholder="example@gmail.com" />
+      <Input label="Password" placeholder="********" />
     </View>
   );
 };

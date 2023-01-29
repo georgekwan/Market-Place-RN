@@ -21,7 +21,11 @@ const Input = ({ label, placeholder, isPassword }) => {
           <Pressable onPress={onEyePress}>
             <Image
               style={styles.eye}
-              source={require('../../assets/eye.png')}
+              source={
+                isPasswordVisible
+                  ? require('../../assets/eye.png')
+                  : require('../../assets/eye_closed.png')
+              }
             />
           </Pressable>
         ) : null}

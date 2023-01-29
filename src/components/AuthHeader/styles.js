@@ -10,5 +10,10 @@ export const styles = StyleSheet.create({
     width: 18,
     height: 18,
   },
-  title: {},
+  title: {
+    color: colors.blue,
+    fontSize: 26,
+    fontWeight: '500',
+    paddingHorizontal: 16,
+  },
 });

@@ -19,7 +19,10 @@ const Input = ({ label, placeholder, isPassword }) => {
         />
         {isPassword ? (
           <Pressable onPress={onEyePress}>
-            <Image source={require('../../assets/eye.png')} />
+            <Image
+              style={styles.eye}
+              source={require('../../assets/eye.png')}
+            />
           </Pressable>
         ) : null}
       </View>

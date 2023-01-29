@@ -7,7 +7,7 @@ const Input = ({ label }) => {
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <View style={styles.inputContainer}>
-        <TextInput style={styles.inputContainer} />
+        <TextInput style={styles.input} />
       </View>
     </View>
   );

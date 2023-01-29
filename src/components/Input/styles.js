@@ -4,7 +4,7 @@ import { colors } from '../../utils/colors';
 export const styles = StyleSheet.create({
   container: {},
   label: {
-    marginVertical: 8,
+    marginBottom: 8,
     color: colors.blue,
     fontSize: 14,
     fontWeight: '500',

@@ -22,5 +22,11 @@ export const styles = StyleSheet.create({
     // borderWidth: 1,
     paddingHorizontal: 16,
     paddingVertical: 20,
+    flex: 1,
+  },
+  eye: {
+    width: 24,
+    height: 24,
+    marginHorizontal: 16,
   },
 });

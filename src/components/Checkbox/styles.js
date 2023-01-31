@@ -13,6 +13,8 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.grey,
     width: '100%',
     height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   checkIcon: {
     width: 12,

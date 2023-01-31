@@ -3,16 +3,19 @@ import { colors } from '../../utils/colors';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.blue,
-    paddingVertical: 20,
-    paddingHorizontal: 8,
-    borderRadius: 8,
-    width: '100%',
+    borderColor: colors.grey,
+    borderWidth: 1,
+    borderRadius: 4,
+    width: 22,
+    height: 22,
   },
-  title: {
-    color: colors.white,
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: 'bold',
+  innerContainer: {
+    backgroundColor: colors.grey,
+    width: '100%',
+    height: '100%',
+  },
+  checkIcon: {
+    width: 12,
+    height: 9,
   },
 });

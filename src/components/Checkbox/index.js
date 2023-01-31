@@ -12,7 +12,7 @@ const Checkbox = ({ checked, onCheck }) => {
       {checked ? (
         <View style={styles.innerContainer}>
           <Image
-            style={StyleSheet.checkIcon}
+            style={styles.checkIcon}
             source={require('../../assets/check.png')}
           />
         </View>

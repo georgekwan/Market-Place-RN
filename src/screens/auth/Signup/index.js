@@ -16,7 +16,10 @@ const Signup = () => {
       <Input isPassword={true} label="Password" placeholder="********" />
       <View style={styles.agreeRow}>
         <Checkbox checked={checked} onCheck={setChecked} />
-        <Text style={styles.agreeText}>I agree with Terms & Privacy</Text>
+        <Text style={styles.agreeText}>
+          I agree with <Text style={styles.agreeTextBold}>Terms</Text> &{' '}
+          <Text style={styles.agreeTextBold}>Privacy</Text>
+        </Text>
       </View>
     </View>
   );

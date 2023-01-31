@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import AuthHeader from '../../../components/AuthHeader';
 import Checkbox from '../../../components/Checkbox';
 import Input from '../../../components/Input';
@@ -16,6 +16,7 @@ const Signup = () => {
       <Input isPassword={true} label="Password" placeholder="********" />
       <View>
         <Checkbox checked={checked} onCheck={setChecked} />
+        <Text>I agree with Terms & Privacy</Text>
       </View>
     </View>
   );

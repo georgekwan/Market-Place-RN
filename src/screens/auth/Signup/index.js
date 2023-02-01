@@ -23,7 +23,7 @@ const Signup = () => {
         </Text>
       </View>
 
-      <Button title="Sign Up" />
+      <Button style={styles.button} title="Sign Up" />
     </View>
   );
 };

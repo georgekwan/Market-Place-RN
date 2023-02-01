@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import AuthHeader from '../../../components/AuthHeader';
+import Button from '../../../components/Button';
 import Checkbox from '../../../components/Checkbox';
 import Input from '../../../components/Input';
 import { styles } from './styles';
@@ -21,6 +22,8 @@ const Signup = () => {
           <Text style={styles.agreeTextBold}>Privacy</Text>
         </Text>
       </View>
+
+      <Button title="Sign Up" />
     </View>
   );
 };

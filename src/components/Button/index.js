@@ -3,6 +3,7 @@ import React from 'react';
 import { styles } from './styles';
 
 const Button = ({ title, onPress, style }) => {
+  console.log('INSIDE BUTTON');
   return (
     <TouchableOpacity
       activeOpacity={0.6}
@@ -14,4 +15,4 @@ const Button = ({ title, onPress, style }) => {
   );
 };
 
-export default Button;
+export default React.memo(Button);

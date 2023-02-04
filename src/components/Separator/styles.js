@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginVertical: 20,
   },
   line: {
     height: 1,
@@ -14,5 +15,6 @@ export const styles = StyleSheet.create({
   text: {
     color: colors.blue,
     fontWeight: '500',
+    marginHorizontal: 8,
   },
 });

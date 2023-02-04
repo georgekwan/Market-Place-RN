@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, View } from 'react-native';
 import React from 'react';
 import { styles } from './styles';
 
@@ -6,7 +6,7 @@ const Seperator = ({ text }) => {
   return (
     <View>
       <View style={styles.line} />
-      <Text>{text}</Text>
+      <Text style={styles.text}>{text}</Text>
       <View style={styles.line} />
     </View>
   );

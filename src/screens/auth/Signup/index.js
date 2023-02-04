@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import AuthHeader from '../../../components/AuthHeader';
 import Button from '../../../components/Button';
 import Checkbox from '../../../components/Checkbox';
 import Input from '../../../components/Input';
-import Separator from '../../../components/Separator';
-import GoogleLogin from '../../../components/GoogleLogin';
+// import Separator from '../../../components/Separator';
+// import GoogleLogin from '../../../components/GoogleLogin';
 import { styles } from './styles';
 
 const Signup = () => {
   const [checked, setChecked] = useState(false);
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <AuthHeader title="Sign Up" />
 
       <Input label="Name" placeholder="John Doe" />
@@ -27,10 +27,10 @@ const Signup = () => {
 
       <Button style={styles.button} title="Sign Up" />
 
-      <Separator text="Or sign up with " />
+      {/* <Separator text="Or sign up with " />
 
-      <GoogleLogin />
-    </View>
+      <GoogleLogin /> */}
+    </ScrollView>
   );
 };
 

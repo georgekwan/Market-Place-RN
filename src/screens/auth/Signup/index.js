@@ -4,6 +4,7 @@ import AuthHeader from '../../../components/AuthHeader';
 import Button from '../../../components/Button';
 import Checkbox from '../../../components/Checkbox';
 import Input from '../../../components/Input';
+import Separator from '../../../components/Separator';
 import { styles } from './styles';
 
 const Signup = () => {
@@ -24,6 +25,8 @@ const Signup = () => {
       </View>
 
       <Button style={styles.button} title="Sign Up" />
+
+      <Separator text="Or sign up with " />
     </View>
   );
 };

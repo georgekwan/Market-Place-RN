@@ -10,6 +10,10 @@ import { styles } from './styles';
 
 const Signup = () => {
   const [checked, setChecked] = useState(false);
+  const onSignIn = () => {
+    console.log('Hello');
+  };
+
   return (
     <ScrollView style={styles.container}>
       <AuthHeader title="Sign Up" />
@@ -30,6 +34,13 @@ const Signup = () => {
       {/* <Separator text="Or sign up with " />
 
       <GoogleLogin /> */}
+
+      <Text style={styles.footerText}>
+        Already have an account?
+        <Text onPress={onSignIn} style={styles.footerLink}>
+          Sign In
+        </Text>
+      </Text>
     </ScrollView>
   );
 };

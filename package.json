@@ -12,7 +12,7 @@
     "@react-native-google-signin/google-signin": "^9.0.2",
     "expo": "~47.0.12",
     "react": "18.1.0",
-    "react-native": "0.70.5",
+    "react-native": "0.71.1",
     "expo-status-bar": "~1.4.2"
   },
   "devDependencies": {

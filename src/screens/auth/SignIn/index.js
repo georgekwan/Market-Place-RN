@@ -3,7 +3,7 @@ import { ScrollView, Text } from 'react-native';
 import AuthHeader from '../../../components/AuthHeader';
 import Button from '../../../components/Button';
 import Input from '../../../components/Input';
-import Separator from '../../../components/Separator';
+// import Separator from '../../../components/Separator';
 // import GoogleLogin from '../../../components/GoogleLogin';
 import { styles } from './styles';
 
@@ -36,4 +36,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default React.memo(Signin);

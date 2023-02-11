@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native';
 import Signup from './src/screens/auth/Signup';
+import Signin from './src/screens/auth/Signin';
 // import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import Config from 'react-native-config';
+// import Config from 'react-native-config';
 
 // const WEB_CLIENT_ID =
 //   '356032109327-0eka9phlma63uoi7sgenobcgpum7i77n.apps.googleusercontent.com';
@@ -21,7 +22,7 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <Signup />
+      <Signin />
     </SafeAreaView>
   );
 };

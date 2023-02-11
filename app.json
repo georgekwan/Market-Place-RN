@@ -6,7 +6,7 @@
     "ios": {
       "googleServicesFile": "./GoogleService-Info.plist"
     },
-    "plugins": ["@react-native-google-signin/google-signin"],
+
     "name": "MarketPlaceRN",
     "slug": "MarketPlaceRN",
     "version": "1.0.0",

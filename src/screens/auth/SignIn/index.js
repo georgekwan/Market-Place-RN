@@ -7,14 +7,18 @@ import Input from '../../../components/Input';
 // import GoogleLogin from '../../../components/GoogleLogin';
 import { styles } from './styles';
 
-const Signin = () => {
+const Signin = ({ navigation }) => {
   const onSignUp = () => {
-    console.log('Hello');
+    navigation.navigate('Signup');
+  };
+
+  const onBack = () => {
+    navigation.goBack();
   };
 
   return (
     <ScrollView style={styles.container}>
-      <AuthHeader title="Sign In" />
+      <AuthHeader onBackPress={onBack} title="Sign In" />
 
       <Input label="Email" placeholder="example@gmail.com" />
       <Input isPassword={true} label="Password" placeholder="********" />

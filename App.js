@@ -42,7 +42,6 @@ const App = () => {
           <Stack.Screen name="Signup" component={Signup} />
         </Stack.Navigator>
       </NavigationContainer>
-      {/* <Signin /> */}
     </SafeAreaProvider>
   );
 };

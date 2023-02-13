@@ -8,7 +8,7 @@ import Separator from '../../../components/Separator';
 // import GoogleLogin from '../../../components/GoogleLogin';
 import { styles } from './styles';
 
-const Signup = () => {
+const Signup = ({ navigation }) => {
   const [checked, setChecked] = useState(false);
 
   const onSignIn = () => {

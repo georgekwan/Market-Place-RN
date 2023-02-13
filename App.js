@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native';
 import Signup from './src/screens/auth/Signup';
 import Signin from './src/screens/auth/Signin';
+import Splash from './src/screens/auth/Splash';
+import { colors } from './src/utils/colors';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 // import { GoogleSignin } from '@react-native-google-signin/google-signin';
 // import Config from 'react-native-config';
 
@@ -9,6 +15,8 @@ import Signin from './src/screens/auth/Signin';
 //   '356032109327-0eka9phlma63uoi7sgenobcgpum7i77n.apps.googleusercontent.com';
 // const IOS_CLIENT_ID =
 //   '356032109327-91jiecs7rjmuuupojnjkqspfbcfpq9c9.apps.googleusercontent.com';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   // useEffect(() => {
@@ -20,10 +28,22 @@ const App = () => {
   //   });
   // }, []);
 
+  const theme = {
+    colors: {
+      background: colors.white,
+    },
+  };
   return (
-    <SafeAreaView>
+    <SafeAreaProvider>
+      <NavigationContainer theme={theme}>
+        <Stack.Navigator>
+          <Stack.Screen name="Splash" component={Splash} />
+          <Stack.Screen name="Signin" component={Signin} />
+          <Stack.Screen name="Signup" component={Signup} />
+        </Stack.Navigator>
+      </NavigationContainer>
       <Signin />
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 

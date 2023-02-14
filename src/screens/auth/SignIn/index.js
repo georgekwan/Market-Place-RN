@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ScrollView, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AuthHeader from '../../../components/AuthHeader';
 import Button from '../../../components/Button';
 import Input from '../../../components/Input';
@@ -17,26 +18,28 @@ const Signin = ({ navigation }) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <AuthHeader onBackPress={onBack} title="Sign In" />
+    <SafeAreaView>
+      <ScrollView style={styles.container}>
+        <AuthHeader onBackPress={onBack} title="Sign In" />
 
-      <Input label="Email" placeholder="example@gmail.com" />
-      <Input isPassword={true} label="Password" placeholder="********" />
+        <Input label="Email" placeholder="example@gmail.com" />
+        <Input isPassword={true} label="Password" placeholder="********" />
 
-      <Button style={styles.button} title="Sign In" />
+        <Button style={styles.button} title="Sign In" />
 
-      {/* <Separator text="Or sign in with " />
+        {/* <Separator text="Or sign in with " />
 
       <GoogleLogin /> */}
 
-      <Text style={styles.footerText}>
-        Don't have an account?
-        <Text onPress={onSignUp} style={styles.footerLink}>
-          {' '}
-          Sign Up
+        <Text style={styles.footerText}>
+          Don't have an account?
+          <Text onPress={onSignUp} style={styles.footerLink}>
+            {' '}
+            Sign Up
+          </Text>
         </Text>
-      </Text>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

@@ -1,6 +1,10 @@
-import { Image, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { Image, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
+import {
+  GoogleSignin,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 
 import {
   GoogleSignin,
@@ -14,7 +18,6 @@ const GoogleLogin = () => {
       const userInfo = await GoogleSignin.signIn();
       console.log('userInfo :>> ', userInfo);
     } catch (error) {
-      // ! Getting Type error event when it is not use for any screens
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
       } else if (error.code === statusCodes.IN_PROGRESS) {

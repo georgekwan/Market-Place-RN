@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView } from 'react-native';
 import Signup from './src/screens/auth/Signup';
 import Signin from './src/screens/auth/Signin';
 import Splash from './src/screens/auth/Splash';

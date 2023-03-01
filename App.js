@@ -12,14 +12,32 @@ import Home from './src/screens/app/Home';
 import Favorites from './src/screens/app/Favorites';
 import Profile from './src/screens/app/Profile';
 
-import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import Config from 'react-native-config';
+// import { GoogleSignin } from '@react-native-google-signin/google-signin';
+// import Config from 'react-native-config';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 const Tabs = () => {
-  <Tab.Navigator screenOptions={{ headerShown: false }}>
+  <Tab.Navigator
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ focused, color, size }) => {
+        let iconName;
+
+        if (route.name === 'Home') {
+          iconName = focused
+            ? 'ios-information-circle'
+            : 'ios-information-circle-outline';
+        } else if (route.name === 'Settings') {
+          iconName = focused ? 'ios-list' : 'ios-list-outline';
+        }
+
+        // You can return any component that you like here!
+        return <Ionicons name={iconName} size={size} color={color} />;
+      },
+      headerShown: false,
+    })}
+  >
     <Tab.Screen name="Home" component={Home} />
     <Tab.Screen name="Favorites" component={Favorites} />
     <Tab.Screen name="Profile" component={Profile} />
@@ -28,16 +46,16 @@ const Tabs = () => {
 
 const App = () => {
   const isSignedIn = true;
-  useEffect(() => {
-    GoogleSignin.configure({
-      scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
-      webClientId: WEB_CLIENT_ID, // client ID of type WEB for your server (needed to verify user ID and offline access)
-      offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
-      accountName: '', // [Android] specifies an account name on the device that should be used
-      // iosClientId: IOS_CLIENT_ID,
-      // [iOS] if you want to specify the client ID of type iOS (otherwise, it is taken from GoogleService-Info.plist)
-    });
-  }, []);
+  // useEffect(() => {
+  //   GoogleSignin.configure({
+  //     scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
+  //     webClientId: WEB_CLIENT_ID, // client ID of type WEB for your server (needed to verify user ID and offline access)
+  //     offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
+  //     accountName: '', // [Android] specifies an account name on the device that should be used
+  //     // iosClientId: IOS_CLIENT_ID,
+  //     // [iOS] if you want to specify the client ID of type iOS (otherwise, it is taken from GoogleService-Info.plist)
+  //   });
+  // }, []);
 
   const theme = {
     colors: {
@@ -48,33 +66,33 @@ const App = () => {
     <SafeAreaProvider>
       <NavigationContainer theme={theme}>
         <Stack.Navigator>
-          {isSignedIn ? (
-            <>
-              <Stack.Screen
-                name="Tabs"
-                component={Tabs}
-                options={{ headerShown: false }}
-              />
-            </>
-          ) : (
-            <>
-              <Stack.Screen
-                name="Splash"
-                component={Splash}
-                options={{ headerShown: false }}
-              />
-              <Stack.Screen
-                name="Signin"
-                component={Signin}
-                options={{ headerShown: false }}
-              />
-              <Stack.Screen
-                name="Signup"
-                component={Signup}
-                options={{ headerShown: false }}
-              />
-            </>
-          )}
+          {/* {isSignedIn ? (
+          <>
+            <Stack.Screen
+              name="Tabs"
+              component={Tabs}
+              options={{ headerShown: false }}
+            />
+          </>
+          ) : ( */}
+          <>
+            <Stack.Screen
+              name="Splash"
+              component={Splash}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Signin"
+              component={Signin}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Signup"
+              component={Signup}
+              options={{ headerShown: false }}
+            />
+          </>
+          {/* )} */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

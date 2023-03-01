@@ -1,16 +1,12 @@
 import React from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
-import {
-  GoogleSignin,
-  statusCodes,
-} from '@react-native-google-signin/google-signin';
+// import {
+//   GoogleSignin,
+//   statusCodes,
+// } from '@react-native-google-signin/google-signin';
 
-import {
-  GoogleSignin,
-  statusCodes,
-} from '@react-native-google-signin/google-signin';
-
+/*
 const GoogleLogin = () => {
   const handleGoogleLogin = async () => {
     try {
@@ -42,3 +38,5 @@ const GoogleLogin = () => {
 };
 
 export default React.memo(GoogleLogin);
+
+*/

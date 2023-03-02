@@ -42,6 +42,7 @@ const Tabs = () => {
         return <Image style={{ width: 24, height: 24 }} source={icon} />;
       },
       headerShown: false,
+      tabBarShowLabel: false,
     })}
   >
     <Tab.Screen name="Home" component={Home} />

@@ -22,18 +22,20 @@ const Tabs = () => {
   <Tab.Navigator
     screenOptions={({ route }) => ({
       tabBarIcon: ({ focused, color, size }) => {
-        let iconName;
+        let icon;
 
         if (route.name === 'Home') {
-          iconName = focused
-            ? 'ios-information-circle'
-            : 'ios-information-circle-outline';
-        } else if (route.name === 'Settings') {
-          iconName = focused ? 'ios-list' : 'ios-list-outline';
+          icon = focused
+            ? require('./src/assets/tabs/home_active.png')
+            : require('./src/assets/tabs/home.png');
+        } else if (route.name === 'Profile') {
+          icon = focused
+            ? require('./src/assets/tabs/home_active.png')
+            : require('./src/assets/tabs/home.png');
         }
 
         // You can return any component that you like here!
-        return <Ionicons name={iconName} size={size} color={color} />;
+        return <Image source={icon} />;
       },
       headerShown: false,
     })}

@@ -30,8 +30,12 @@ const Tabs = () => {
             : require('./src/assets/tabs/home.png');
         } else if (route.name === 'Profile') {
           icon = focused
-            ? require('./src/assets/tabs/home_active.png')
-            : require('./src/assets/tabs/home.png');
+            ? require('./src/assets/tabs/profile_active.png')
+            : require('./src/assets/tabs/profile.png');
+        } else if (route.name === 'Favorite') {
+          icon = focused
+            ? require('./src/assets/tabs/bookmark_active.png')
+            : require('./src/assets/tabs/bookmark.png');
         }
 
         // You can return any component that you like here!

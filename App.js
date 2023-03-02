@@ -12,6 +12,9 @@ import Home from './src/screens/app/Home';
 import Favorites from './src/screens/app/Favorites';
 import Profile from './src/screens/app/Profile';
 
+import LogRocket from '@logrocket/react-native';
+LogRocket.init('isggc7/marketplacern');
+
 // import { GoogleSignin } from '@react-native-google-signin/google-signin';
 // import Config from 'react-native-config';
 
